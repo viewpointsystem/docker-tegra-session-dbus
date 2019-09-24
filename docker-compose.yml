@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  dbus:
+    image: docker-tegra-dbus
+    build:
+      context: .
+    init: true
+    # network_mode: "host"
+    restart: "no"
+    volumes:
+      - dbus:/tmp/dbus
+
+volumes:
+  dbus: {}
