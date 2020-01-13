@@ -1,14 +1,14 @@
 version: "3.7"
 services:
   dbus:
-    image: docker-tegra-dbus
+    image: bly-dbus:1.0.0
     build:
       context: .
     init: true
     # network_mode: "host"
     restart: "no"
     volumes:
-      - dbus:/tmp/dbus
+      - dbus:/var/run/dbus/vps
 
 volumes:
   dbus: {}
